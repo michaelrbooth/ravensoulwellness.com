@@ -26,4 +26,12 @@ RUN mkdir -p /app/libs/
 # Copy the jar file(s)
 COPY --from=builder /app/build/libs/*.jar /app/libs/
 # Use the jar file
+# Add environment variable for the port
+ENV PORT=8080
+EXPOSE ${PORT}
+
+# Add health check
+HEALTHCHECK --interval=5s --timeout=3s --retries=3 \
+  CMD curl -f http://localhost:${PORT}/ || exit 1
+
 ENTRYPOINT ["java", "-jar", "/app/libs/ravensoulwellness-0.0.1-SNAPSHOT.jar"]

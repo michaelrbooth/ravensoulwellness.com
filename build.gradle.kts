@@ -5,7 +5,7 @@ plugins {
     kotlin("plugin.spring") version "1.9.22"
 }
 
-group = "com.ravensoul"
+group = "com.bricknbyte.ravenSoul"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -34,4 +34,5 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
+
 

@@ -10,4 +10,9 @@ class HomeController {
     fun home(): String {
         return "index"
     }
+
+    @GetMapping("/health")
+    fun health(): String {
+        return "health"
+    }
 }

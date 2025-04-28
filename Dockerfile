@@ -7,7 +7,7 @@ COPY gradlew build.gradle.kts settings.gradle ./
 
 # Fix line endings and make gradlew executable
 RUN sed -i 's/\r$//' gradlew && \
-    chmod +x gradlew
+  chmod +x gradlew
 
 # Verify Gradle wrapper and download dependencies
 RUN ./gradlew --version
@@ -17,21 +17,25 @@ RUN ./gradlew dependencies
 COPY src/ src/
 
 # Build the application
-RUN ./gradlew clean build -x test
+RUN ./gradlew clean bootJar
 
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-# Create a directory for the jar
-RUN mkdir -p /app/libs/
-# Copy the jar file(s)
-COPY --from=builder /app/build/libs/*.jar /app/libs/
-# Use the jar file
+
+# Install curl for health check
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /app/build/libs/app.jar app.jar
+
 # Add environment variable for the port
-ENV PORT=8080
-EXPOSE ${PORT}
+#ENV PORT=8080
+#ENV JAVA_OPTS="-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"
+
+EXPOSE 8080
 
 # Add health check
 HEALTHCHECK --interval=5s --timeout=3s --retries=3 \
-  CMD curl -f http://localhost:${PORT}/ || exit 1
+CMD curl -f http://localhost:8080/health || exit 1
 
-ENTRYPOINT ["java", "-jar", "/app/libs/ravensoulwellness-0.0.1-SNAPSHOT.jar"]
+# Use shell form to ensure environment variables are expanded
+ENTRYPOINT exec java -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 -jar app.jar

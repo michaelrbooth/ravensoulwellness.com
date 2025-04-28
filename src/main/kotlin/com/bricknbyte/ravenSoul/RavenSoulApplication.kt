@@ -1,4 +1,4 @@
-package com.bricknbyte.ravensoul
+package com.bricknbyte.ravenSoul
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

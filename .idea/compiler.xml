@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="ravensoulwellness.com" target="17" />
+      <module name="ravensoulwellness.com.main" target="17" />
+      <module name="ravensoulwellness.com.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ravenSoul" options="-parameters" />
+      <module name="ravenSoul.main" options="-parameters" />
+      <module name="ravenSoul.test" options="-parameters" />
       <module name="ravensoulwellness.com" options="-parameters" />
       <module name="ravensoulwellness.com.main" options="-parameters" />
       <module name="ravensoulwellness.com.test" options="-parameters" />

@@ -10,3 +10,4 @@ build/
 /.gradle/buildOutputCleanup
 /.gradle/vcs-1
 .gradle/file-system.probe
+stuff.txt

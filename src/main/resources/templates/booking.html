@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/layout :: head(title='Book Your Session - Raven Soul Wellness')}">
+  <title>Booking</title>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js'></script>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="js/booking.js"></script>
+</head>
+<body>
+<header th:replace="~{fragments/layout :: header}"></header>
+
+<section class="booking-section">
+  <div class="container">
+    <div class="booking-header">
+      <h1 class="section-title">Book Your Session</h1>
+      <p class="lead-text">Choose your preferred counselor and session type to begin your wellness journey.</p>
+    </div>
+
+    <div class="booking-grid">
+      <!-- Counselor Booking Cards -->
+      <div class="booking-cards">
+        <!-- Individual Counselor Card -->
+        <div class="counselor-card">
+          <div class="counselor-info">
+            <img src="images/hunter1.jpg" alt="HunterAnn Booth" class="counselor-image">
+            <h3 class="counselor-name">HunterAnn Booth</h3>
+            <p class="counselor-specialty">Specialties: </p>
+            <iframe src="https://calendar.google.com/calendar/embed?src=hunter%40ravensoulwellness.net&ctz=America%2FVancouver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+          <div class="session-options">
+            <h4>Available Sessions:</h4>
+            <button class="session-btn" data-calendar-id="counselor1@domain.com" data-duration="60">
+              60-Min Individual Session
+            </button>
+            <button class="session-btn" data-calendar-id="counselor1@domain.com" data-duration="90">
+              90-Min Initial Consultation
+            </button>
+          </div>
+        </div>
+
+        <!-- Add more counselor cards as needed -->
+      </div>
+
+      <!-- Booking Calendar Container -->
+      <div class="calendar-container">
+        <div id="booking-calendar"></div>
+        <div id="time-slots"></div>
+      </div>
+    </div>
+
+    <!-- Booking Form (appears after time selection) -->
+    <div id="booking-form" class="booking-form hidden">
+      <h3>Complete Your Booking</h3>
+      <form id="session-booking-form">
+        <div class="form-group">
+          <input type="text" id="client-name" required placeholder="Your Full Name">
+        </div>
+        <div class="form-group">
+          <input type="email" id="client-email" required placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <input type="tel" id="client-phone" required placeholder="Your Phone Number">
+        </div>
+        <div class="form-group">
+          <textarea id="client-notes" placeholder="Any notes or concerns you'd like to share?"></textarea>
+        </div>
+        <button type="submit" class="submit-booking">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+</body>
+</html>

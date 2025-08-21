@@ -1,15 +1,25 @@
 package com.bricknbyte.ravenSoul.controllers
 
 import org.springframework.stereotype.Controller
+import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
 class HomeController {
 
     @GetMapping("/")
-    fun home(): String {
+    fun home(model: Model): String {
+        model.addAttribute("pageTitle", "Raven Soul Wellness - Home")
         return "index"
     }
+
+
+    @GetMapping("/booking")
+    fun booking(model: Model): String {
+        model.addAttribute("pageTitle", "Book Your Session - Raven Soul Wellness")
+        return "booking"
+    }
+
 
     @GetMapping("/health")
     fun health(): String {

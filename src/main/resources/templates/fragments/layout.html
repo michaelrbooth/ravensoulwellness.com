@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">Default Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+
+<header th:fragment="header">
+    <section class="hero-section header">
+        <div class="container horizontal-layout">
+            <div class="column top-align">
+                <img src="/images/logo3.png" height="400" width="400" alt="Raven Soul Wellness"/>
+            </div>
+            <div class="column center-align"><h1>Counselling & Coaching</h1></div>
+            <div class="column bottom-align">
+                <p class="subtitle fade-in">Transform.Heal.Empower<br/>
+                    The way of the Raven</p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<footer th:fragment="footer" class="footer">
+    <div class="footer-container">
+
+
+        <div class="footer-section">
+            <h3>Navigate</h3>
+            <ul class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/booking">Book Now</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="/images/logo1.png" alt="Raven Soul Wellness Logo">
+                <div>Raven Soul Wellness</div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect</h3>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61556177177589" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/raven.soul.wellness/" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                <span class="footer-symbol">&#9735;</span>
+                Copyright © <script>document.write(new Date().getFullYear())</script> Raven Soul Wellness
+                <span class="footer-symbol">&#9735;</span>
+            </p>
+            <p class="copyright">All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,28 +1,22 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
-<html>
-
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<html lang="en">
+<head th:replace="~{fragments/layout :: head(title='Raven Soul Wellness - Home')}">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 <body>
-<section class="hero-section header">
-    <div class="container horizontal-layout">
-        <div class="column top-align"><img src="images/logo3.png" height="200" width="200" alt="Raven Soul Wellness"/></div>
-        <div class="column center-align"><h1>Counselling & Coaching</h1></div>
-        <div class="column bottom-align"><p class="subtitle fade-in">Transform.Heal.Empower</br>
-            The way of the Raven</p></div>
-    </div>
-</section>
+<header th:replace="~{fragments/layout :: header}"></header>
+
 <section class="hero-section-bordered">
     <div class="container">
         <div class="row horizontal-layout">
             <div class="column text-content">
-                <p class="lead-small text-center">At Raven Soul Wellness, our team of dedicated counselors and certified coaches brings a wealth of experience and specialized training to support your unique path. Our counselors are skilled in evidence-based approaches including Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), Person-Centered Therapy, Somatic Therapy, and Emotionally Focused Therapy (EFT).<br>
-                    <br>
-                    We offer guidance in personal growth, effective communication in both relationships and the workplace, and the development of practical coping strategies. Together, we help you build a personalized toolkit to navigate life's toughest challenges with confidence and resilience.<br>
-                    <br>
-                    Whether you're seeking healing, transformation, or clarity, we're here to walk beside you on your journey.</p>
+                <p class="lead-small text-center">At Raven Soul Wellness, we believe every soul carries the power to heal and begin again. We offer a space of compassion and courage, where stories are honored, hearts are mended, and new paths are found. Like the raven, symbol of wisdom and renewal, we walk beside you as you rediscover your strength, your voice, and your light.<br>
+
             </div>
             <div class="column center-align">
                 <img src="images/forest.jpg" alt="Forest scenery" height="286" width="292">
@@ -34,111 +28,84 @@
     <div class="row">
         <div class="container horizontal-layout">
 
-        <div class="column top-align">
-            <h2 class="text-center mb-5">Services</h2>
-            <UL class="list-left">
-            <LI>Grief and loss:</LI>
-                <LI>Grieving a loved one</LI>
-                <LI>Saying goodbye to a cherished animal companion</LI>
-                <LI> Moving through divorce</LI>
-                <LI>Navigating other deeply personal losses [subtitles]</LI>
-                <LI>Journey through profound illness</LI>
-                <LI>Individual Counseling</LI>
-                <LI>IKIGAI</LI>
-                <LI>ADHD & ASD</LI>
-                <LI>Couples Counseling</LI>
-                <LI>Stress and Anxiety</LI>
-                <LI>LGBTQAI+</LI>
-                <LI>Pre-Partnership Counseling</LI>
-            </UL>
+            <div class="column top-align">
+                <h2 class="section-title">Services</h2>
+                <UL class="support-list">
+                    <LI class="support-list">Grief and loss:</LI>
+                    <LI class="support-item">Grieving a loved one</LI>
+                    <LI class="support-item">Saying goodbye to a cherished animal companion</LI>
+                    <LI class="support-item"> Moving through divorce</LI>
+                    <LI class="support-item">Navigating other deeply personal losses [subtitles]</LI>
+                    <LI class="support-item">Journey through profound illness</LI>
+                    <LI class="support-item">Individual Counseling</LI>
+                    <LI class="support-item">IKIGAI</LI>
+                    <LI class="support-item">ADHD & ASD</LI>
+                    <LI class="support-item">Couples Counseling</LI>
+                    <LI class="support-item">Stress and Anxiety</LI>
+                    <LI class="support-item">LGBTQAI+</LI>
+                    <LI class="support-item">Pre-Partnership Counseling</LI>
+                </UL>
 
-            <!--p>Additional Areas of Expertise </p-->
-        </div>
-        <div class="column top-align">
-            <!--For more information, or to schedule a session [link]:
+                <!--p>Additional Areas of Expertise </p-->
+            </div>
+            <div class="column top-align support-item">
+                <!--For more information, or to schedule a session [link]:
+                Call:
 
-            Call:
-
-            Text:-->
-
-            <p class="footer-links"><a href="mailto:hunter@ravensouldwellness.net">Email Hunter</a><br/>
-
-            <b class="text-center mb-5">Appointments available:</b><br/>
-
-            Mon-Fri 8:30am-9:00pm<br>
-            Sat and Sun: 9:00am-5:00pm
-<br><br>
-            Evenings upon request
-            with a specific therapist</p>
-        </div>
+                Text:-->
+                <UL class="support-list">
+                    <li class="support-item"><h3 class="text-center mb-5">Book an Appointment with Us</h3></li>
+                    <li class="footer-links"><a href="booking">Booking</a></li>
+                    <li class="support-item"><h3 class="text-center mb-5">Appointments available:</h3></li>
+                    <li class="support-item"> Mon-Fri 8:30am-9:00pm
+                    </li>
+                    <li class="support-item"> Sat and Sun: 9:00am-5:00pm
+                    </li>
+                    <li>&nbsp;</li>
+                    <li class="support-item"> Evenings upon request
+                        with a specific therapist
+                    </li>
+                </UL>
+            </div>
         </div>
     </div>
 </section>
 <section class="hero-section">
-    <div class="row">
-        <div class="container horizontal-layout">
-
-            <div class="column top-align">
-                <h2 class="text-center">Support Groups</h2><br>
-                <ul class="lead-small">
-                    <li>Check out our welcoming support groups, designed with flexible drop-in schedules to fit your life.
-Grief & Loss - Raven's Death Cafe: A compassionate space to explore grief, loss, and the journey of healing through open, respectful conversations.
+    <div class="container">
+        <div class="row horizontal-layout">
+            <div class="column content-column">
+                <h2 class="section-title">Support Groups</h2>
+                <ul class="support-list">
+                    <li class="support-item">
+                        <h3>Grief & Loss—Raven's Death Cafe</h3>
+                        <p>Check out our welcoming support groups, designed with flexible drop-in schedules to fit your
+                            life. A compassionate space to explore grief, loss, and the journey of healing through open,
+                            respectful conversations.</p>
                     </li>
-                    <li>Women's Empowerment Group: Connect with others in a safe, confidential setting to share experiences, build resilience, and grow in strength and self-awareness.
+                    <li class="support-item">
+                        <h3>Women's Empowerment Group</h3>
+                        <p>Connect with others in a safe, confidential setting to share experiences, build resilience,
+                            and grow in strength and self-awareness.</p>
                     </li>
-                    <li>Men's Empowerment Group: A supportive environment for men to explore wellness, identity, and personal growth while building tools to thrive.
-                    </li><br/>
-Each group is held in a confidential and nurturing space where you can feel seen, heard, and supported.
-</ul>
-</div> <div class="column center-align">
-            <img src="images/team.jpg" alt="Forest scenery" height="286" width="292">
-        </div>
-</div>
-</div>
-</section>
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="images/logo1.png" alt="Raven Soul Wellness Logo">
-            <div>Raven Soul Wellness</div>
-        </div>
+                    <li class="support-item">
+                        <h3>Men's Empowerment Group</h3>
+                        <p>A supportive environment for men to explore wellness, identity, and personal growth while
+                            building tools to thrive.</p>
+                    </li>
+                </ul>
 
-        <div class="footer-section">
-            <h3>Navigate</h3>
-            <ul class="footer-links">
-                <li><a href="/">Home</a></li>
-                <!--li><a href="/services">Services</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li-->
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Hours</h3>
-            <ul class="footer-links">
-                <li>Mon-Fri 8:30am-9:00pm</li>
-                <li>Sat and Sun: 9:00am-5:00pm</li>
-
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Connect</h3>
-            <div class="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=61556177177589" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/raven.soul.wellness/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="column image-column">
+                <img src="images/team.jpg" alt="Support Groups" class="support-image">
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p class="copyright">
-                <span class="footer-symbol">&#9735;</span>
-                Copyright © <script>document.write(new Date().getFullYear())</script> Raven Soul Wellness
-                <span class="footer-symbol">&#9735;</span>
-            </p>
-            <p class="copyright">All Rights Reserved</p>
+        <div class="row horizontal-layout">
+            <p class="section-note">Each group is held in a confidential and nurturing space where you can feel seen,
+                heard, and supported.</p>
         </div>
     </div>
-</footer>
+</section>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+
 </body>
 </html>

@@ -476,7 +476,7 @@ h1::after {
 }
 
 .counselor-card {
-    background: darkslategray;
+    background:  var(--gold-accent);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

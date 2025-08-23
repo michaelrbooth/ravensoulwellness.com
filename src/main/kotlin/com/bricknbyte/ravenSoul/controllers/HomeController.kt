@@ -20,6 +20,11 @@ class HomeController {
         return "booking"
     }
 
+    @GetMapping("/about")
+    fun about(model: Model): String {
+        model.addAttribute("pageTitle", "About Us - Raven Soul Wellness")
+        return "about"
+    }
 
     @GetMapping("/health")
     fun health(): String {

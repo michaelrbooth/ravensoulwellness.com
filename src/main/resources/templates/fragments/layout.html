@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
     <meta charset="UTF-8">
     <title th:text="${pageTitle}">Default Title</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/styles.css}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -17,9 +17,14 @@
                 <a href="/"><img src="/images/logo3.png" height="400" width="400" alt="Raven Soul Wellness"/></a>
             </div>
             <div class="column center-align"><h1>Counselling & Coaching</h1></div>
-            <div class="column bottom-align">
-                <p class="subtitle fade-in">Transform.Heal.Empower<br/>
-                    The way of the Raven</p>
+            <div class="column ">
+                <div class="row column right-align"><!--b><a href="booking">
+                    <button class="btn right-align" type="button">Book Us</button>
+                </a></b--></div>
+                <div class="row column bottom-align">
+                    <p class="subtitle fade-in">Transform.Heal.Empower<br/>
+                        The way of the Raven</p>
+                </div>
             </div>
         </div>
     </section>
@@ -60,7 +65,9 @@
         <div class="footer-bottom">
             <p class="copyright">
                 <span class="footer-symbol">&#9735;</span>
-                Copyright © <script>document.write(new Date().getFullYear())</script> Raven Soul Wellness
+                Copyright ©
+                <script>document.write(new Date().getFullYear())</script>
+                Raven Soul Wellness
                 <span class="footer-symbol">&#9735;</span>
             </p>
             <p class="copyright">All Rights Reserved</p>

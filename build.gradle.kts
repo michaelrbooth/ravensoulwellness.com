@@ -31,6 +31,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    //implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+
+    // https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-starter-data-datastore
+   // implementation("com.google.cloud:spring-cloud-gcp-starter-data-datastore:7.2.0")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

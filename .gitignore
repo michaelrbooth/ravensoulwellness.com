@@ -11,3 +11,4 @@ build/
 /.gradle/vcs-1
 .gradle/file-system.probe
 stuff.txt
+service-account-key.json

@@ -12,11 +12,12 @@
         <th>Email</th>
     </tr>
     </thead>
-    <tbody>
-    <tr th:each="user : ${users}">
-        <td th:text="${user.name}">Name</td>
-        <td th:text="${user.email}">Email</td>
-    </tr>
+    {{#users}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+        </tr>
+    {{/users}}
     </tbody>
 </table>
 <a href="/users/add">Add New User</a>

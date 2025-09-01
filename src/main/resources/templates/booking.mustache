@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head th:replace="~{fragments/layout :: head(title='Book Your Session - Raven Soul Wellness')}">
-    <title>Booking</title>
-    <meta charset="UTF-8">
-    <title>Booking</title>
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet'/>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js'></script>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="js/booking.js"></script>
-</head>
-<body>
-<header th:replace="~{fragments/layout :: header}"></header>
+{{>header}}
 
 <section class="booking-section">
     <div class="container">
@@ -54,6 +42,4 @@
         </div>
     </div>
 </section>
-<footer th:replace="~{fragments/layout :: footer}"></footer>
-</body>
-</html>
+{{>footer}}

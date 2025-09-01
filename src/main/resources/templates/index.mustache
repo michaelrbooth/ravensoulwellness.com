@@ -1,16 +1,5 @@
-<!-- templates/index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head th:replace="~{fragments/layout :: head(title='Raven Soul Wellness - Home')}">
-    <title>Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-<header th:replace="~{fragments/layout :: header}"></header>
 
+{{> header}}
 <section class="hero-section-bordered">
     <div class="container">
         <div class="row horizontal-layout">
@@ -79,7 +68,4 @@
 
 </section>
 
-<footer th:replace="~{fragments/layout :: footer}"></footer>
-
-</body>
-</html>
+{{> footer}}

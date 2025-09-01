@@ -21,8 +21,8 @@ RUN ./gradlew clean bootJar
 
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-#COPY service-account-key.json /app/service-account-key.json
-#ENV GOOGLE_APPLICATION_CREDENTIALS=/app/service-account-key.json
+COPY /app/service-account-key.json /app/service-account-key.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=/app/service-account-key.json
 # Install curl for health check
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 

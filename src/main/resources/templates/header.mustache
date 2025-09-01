@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>{{pageTitle}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<header>
+    <section class="hero-section header">
+        <div class="container horizontal-layout">
+            <div class="column top-align">
+                <a href="/"><img src="/images/logo3.png" height="400" width="400" alt="Raven Soul Wellness"/></a>
+            </div>
+            <div class="column center-align"><h1>Counselling & Coaching</h1></div>
+            <div class="column ">
+                <div class="row column right-align"><!--b><a href="booking">
+                    <button class="btn right-align" type="button">Book Us</button>
+                </a></b--></div>
+                <div class="row column bottom-align">
+                    <p class="subtitle fade-in">Transform.Heal.Empower<br/>
+                        The way of the Raven</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>

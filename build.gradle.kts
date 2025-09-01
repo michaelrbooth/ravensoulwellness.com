@@ -22,6 +22,13 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         jvmTarget = "17"
     }
 }
+configurations["runtimeClasspath"].incoming.artifactView {
+    isLenient = true
+    componentFilter { id ->
+        // filter logic, e.g., only include certain modules
+        true
+    }
+}
 
 repositories {
     mavenCentral()
@@ -29,12 +36,11 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("org.springframework.boot:spring-boot-starter-mustache")
+    //implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+   // implementation("com.google.cloud:spring-cloud-gcp-starter-data-datastore")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    //implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
-
-    // https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-starter-data-datastore
-   // implementation("com.google.cloud:spring-cloud-gcp-starter-data-datastore:7.2.0")
+    implementation("com.google.cloud:spring-cloud-gcp-starter-data-datastore:4.9.1")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

@@ -6,26 +6,23 @@ import com.bricknbyte.ravenSoul.providers.dtos.UserDTO
 import org.springframework.stereotype.Service
 
 @Service
-class UserService(){//val userRepository: UserProvider) {
+class UserService(val userRepository: UserProvider) {
     fun saveUser(name: String, email: String): User {
-        val user: UserDTO = UserDTO().apply {
-            this.id = java.util.UUID.randomUUID().toString()
-            this.name = name
-            this.email = email
-
-        }
-       // userRepository.save(user)
+        val user = UserDTO(
+            id = java.util.UUID.randomUUID().toString(),
+            username = name,
+            email = email
+        )
+        userRepository.save(user)
         println("User saved: $user")
-        return User(user.id, user.name, user.email)
+        return User(user.id, user.username, user.email)
     }
 
     fun getAllUsers(): List<User> {
-        val users: List<User> = listOf()//userRepository.findAll()
+        val users = userRepository.findAll()
         val returnList = mutableListOf<User>()
         for (user in users) {
-            if (user != null) {
-                returnList.add(User(user.id, user.name, user.email))
-            }
+            returnList.add(User(user.id, user.username, user.email))
         }
         return returnList.sortedBy { it.name }
     }

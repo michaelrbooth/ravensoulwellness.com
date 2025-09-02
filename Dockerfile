@@ -1,5 +1,6 @@
 FROM eclipse-temurin:17-jdk as builder
 WORKDIR /app
+ENV SPRING_PROFILES_ACTIVE=prod
 
 # Copy Gradle files
 COPY gradle/ gradle/

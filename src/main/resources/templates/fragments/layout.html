@@ -74,4 +74,9 @@
         </div>
     </div>
 </footer>
+<script>
+  document.querySelectorAll('.nav-tab').forEach(a=>{
+    if (a.getAttribute('href') === location.pathname) a.classList.add('active');
+  });
+</script>
 </html>

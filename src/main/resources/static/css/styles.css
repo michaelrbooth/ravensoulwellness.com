@@ -538,7 +538,35 @@ h1::after {
     align-items: center;
     gap: .6rem;
 }
+/* File: src/main/resources/static/css/site.css */
+.top-nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 0;      /* no bottom padding so tabs sit flush */
+  position: relative;
+  z-index: 50;            /* keep tabs above page content */
+}
 
+.nav-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;  /* align tabs to bottom of the nav container */
+  margin-bottom: -1px;    /* overlap the content border to remove white gap */
+}
+
+.nav-tabs li { display: block; }
+
+.nav-tab {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px 12px 0 0;  /* rounded top, square bottom */
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
 
 .btn:hover { filter: brightness(1.02) saturate(1.02); transform: translateY(-1px); }
 .btn:active { transform: translateY(0); filter: brightness(.98); }

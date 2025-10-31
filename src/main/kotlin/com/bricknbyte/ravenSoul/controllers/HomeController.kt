@@ -1,6 +1,7 @@
 package com.bricknbyte.ravenSoul.controllers
 
 
+import com.bricknbyte.ravenSoul.services.ServicesService
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
@@ -9,7 +10,7 @@ import com.bricknbyte.ravenSoul.services.UserService
 import org.springframework.stereotype.Controller
 
 @Controller
-class HomeController(val userService: UserService) {
+class HomeController(val userService: UserService, val servicesService: ServicesService) {
 
     @GetMapping("/")
     fun home(model: Model): String {
@@ -22,6 +23,29 @@ class HomeController(val userService: UserService) {
     fun booking(model: Model): String {
         model.addAttribute("pageTitle", "Book Your Session - Raven Soul Wellness")
         return "booking"
+    }
+
+    @GetMapping("/services")
+    fun services(model: Model, @RequestParam service: String?): String {
+        model.addAttribute("pageTitle", "Services - Raven Soul Wellness")
+        if(service == null){
+            model.addAttribute("content", servicesService.getService("default"))
+        } else {
+            model.addAttribute("content", servicesService.getService(service))
+        }
+        return "services"
+    }
+
+    @GetMapping("/supportGroups")
+    fun supportGroups(model: Model): String {
+        model.addAttribute("pageTitle", "Support Groups - Raven Soul Wellness")
+        return "support"
+    }
+
+    @GetMapping("/team")
+    fun team(model: Model): String {
+        model.addAttribute("pageTitle", "Our Team - Raven Soul Wellness")
+        return "team"
     }
 
     @GetMapping("/about")

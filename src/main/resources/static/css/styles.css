@@ -193,6 +193,13 @@ nav a:hover {
     font-size: 1rem;
 }
 
+.support-item a {
+    color: var(--gold-accent);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+}
+
 .section-note {
     text-align: center;
     font-style: italic;
@@ -561,14 +568,30 @@ h1::after {
 .nav-tabs li { display: block; }
 
 .nav-tab {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 12px 12px 0 0;  /* rounded top, square bottom */
-  background: #000000;
-  color: #ffffff;
-  text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px 12px 0 0; /* rounded top, square bottom */
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
 
-.btn:hover { filter: brightness(1.02) saturate(1.02); transform: translateY(-1px); }
-.btn:active { transform: translateY(0); filter: brightness(.98); }
-.btn:focus-visible { outline: none; box-shadow: var(--ring); }
-.btn:disabled, .btn[aria-disabled="true"] { opacity: .6; cursor: not-allowed; }
+    .btn:hover {
+        filter: brightness(1.02) saturate(1.02);
+        transform: translateY(-1px);
+    }
+
+    .btn:active {
+        transform: translateY(0);
+        filter: brightness(.98);
+    }
+
+    .btn:focus-visible {
+        outline: none;
+        box-shadow: var(--ring);
+    }
+
+    .btn:disabled, .btn[aria-disabled="true"] {
+        opacity: .6;
+        cursor: not-allowed;
+    }
+}

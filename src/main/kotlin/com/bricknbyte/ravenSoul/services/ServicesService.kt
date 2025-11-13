@@ -199,6 +199,80 @@ Our Alternative Lifestyles Counseling and Coaching supports individuals and part
 """
                 modal("Alternative Lifestyles", content)
             }
+            "intimacy" -> {
+                val content = """Healthy intimacy is a cornerstone of fulfilling relationships, yet many people struggle with connection, vulnerability, and closeness. Intimacy Counseling provides a safe and supportive space to explore emotional, physical, and relational intimacy challenges.
+We help you and your partner (or you individually) build trust, enhance communication, and navigate barriers to closeness. Through guidance and practical strategies, you’ll learn to foster deeper connection, express your needs openly, and create a satisfying and authentic intimate life.
+<br><br>
+Our goal is to support you in cultivating meaningful, nurturing, and sustainable intimacy that strengthens both your relationship and your sense of self."""
+                modal("Intimacy", content)
+            }
+            "precommit" -> {
+                val content = """Whether you are preparing for marriage or forming a partnership in your own way, Pre-Commitment Counseling provides a safe and supportive space to explore your values, expectations, and shared goals. We help couples and partners identify common ground, improve communication, and set a strong foundation for a loving, respectful, and lasting relationship.
+<br><br>
+Through guided conversations and practical exercises, you’ll gain clarity on your priorities, navigate potential challenges, and develop strategies for building a partnership that reflects both your individual needs and shared vision. Our goal is to support you in creating a relationship rooted in understanding, trust, and mutual growth.
+<br><br>
+Pre-Commitment Counseling helps couples and partners explore shared values, expectations, and goals before committing to a lifelong or chosen partnership. We provide guidance and tools to strengthen communication, clarify priorities, and create a strong foundation for a loving, lasting relationship.
+"""
+                modal("Pre-Commitment", content)
+            }
+            "spiritual" -> {
+                val content = """Spiritual Counseling provides a supportive space to explore your inner life, connect with your values, and find meaning and purpose in your journey. Whether you are navigating personal challenges, life transitions, or seeking deeper self-understanding, this counseling approach helps you align with your authentic self and inner guidance.
+<br><br>Together, we explore your beliefs, strengths, and spiritual practices to foster growth, resilience, and clarity. Through reflective conversations and practical strategies, you’ll gain insight, peace, and empowerment to navigate life with intention, balance, and fulfillment."""
+                modal("Spiritual Counseling", content)
+            }
+            "ikigai" -> {
+                val content = """IKIGAI is a Japanese concept that means “reason for being” — the sweet spot where your passions, talents, values, and what the world needs intersect. IKIGAI coaching at Raven Soul Wellness helps you uncover your purpose, align your goals, and live with intention and fulfillment.
+<br><br>
+Through personalized guidance, reflective exercises, and practical strategies, our coaches support you in discovering what truly energizes and motivates you, helping you make choices that feel meaningful and authentic. Whether you’re navigating a career change, personal growth, or life transitions, IKIGAI coaching empowers you to create a life that feels purposeful and aligned with your deepest values.
+"""
+                modal("Ikigai Coaching", content)
+            }
+            "adoption" -> {
+                val content = """Adoption is a journey filled with love, complexity, and sometimes unexpected challenges. At Raven Soul Wellness, we understand adoption not only from professional training but also through lived experience. Our services are designed to support individuals, couples, and families who are navigating the unique realities of adoption and the many transitions that may come with it.
+<br><br>
+We provide a safe and non-judgmental space to explore:
+<ul>
+<li>The joys and challenges of adoption, from preparation to lifelong integration.</li>
+<li>Feelings of loss, identity, or grief that may arise for adoptees, birth parents, and adoptive families.</li>
+<li>Unexpected changes along the adoption path, including disrupted placements or evolving relationships.</li>
+<li>Navigating conversations about sperm donors, egg donors, and surrogacy, and their impact on family identity.</li>
+<li>The questions and emotions tied to biological connections—whether you’re longing for more information, building relationships with biological parents, or processing what it means not to know.</li>
+<li>Life transitions that can bring adoption-related feelings back to the surface, such as becoming a parent, experiencing loss, or facing major life changes.</li>
+</ul>
+<br><br>
+Through counseling and coaching, we help you explore your story, strengthen resilience, and honor every layer of your experience. Whether you are an adoptee, adoptive parent, birth parent, or part of a donor-conceived family, you are not alone. We are here to walk alongside you as you navigate identity, belonging, and healing with compassion and clarity."""
+                modal("Adoption Support", content)
+            }
+            "fertility" -> {
+                val content = """The path to parenthood is rarely a straight line. For many, it includes heartbreak, grief, and deeply personal decisions. At Raven Soul Wellness, we provide compassionate counseling and coaching for individuals and families navigating the emotional complexities of fertility challenges, pregnancy loss, abortion, and unexpected outcomes.
+We hold space for:
+<br>
+<ul>
+<li>IVF & Fertility Journeys – Supporting the hopes, stress, and emotional rollercoaster that come with treatments, waiting, and uncertainty.</li>
+<li>Miscarriage & Stillbirth – Honoring your grief, helping you process the loss, and finding ways to carry your baby’s memory with you.</li>
+<li>Abortion Support – Providing non-judgmental care for those who have chosen or are considering abortion, recognizing the range of emotions and circumstances that surround this decision.</li>
+<li>Pregnancy After Loss – Navigating the hope, fear, and vulnerability of trying again.</li>
+<li>Unexpected Transitions – Adjusting to the reality of outcomes that look different than you imagined, including child-free living.</li>
+</ul>
+Our work acknowledges the depth of your loss and the strength it takes to keep moving forward. Here, your story is respected and your emotions are valid. Whether you need a place to grieve, process decisions, or rebuild hope, we walk alongside you with compassion, honesty, and understanding.
+"""
+                modal("Fertility, Pregnancy & Reproductive Loss Support", content)
+            }
+            "attachment" -> {
+                val content = """<h3>Secure Attachment</h3>
+ A balanced style where you feel comfortable with closeness, trust, and independence in relationships. People with secure attachment usually find it easier to communicate needs, set healthy boundaries, and feel safe in connections.
+<br><br>
+<h3>Anxious Attachment</h3>
+ Often marked by a strong need for closeness and reassurance, but also a fear of abandonment. This style can bring deep care for others, yet sometimes create worry about being “too much” or not enough.
+<br><br>
+<h3>Avoidant Attachment</h3>
+ Characterized by valuing independence and sometimes keeping emotional distance to feel safe. While avoidant styles can foster strength and self-reliance, they can also make it difficult to ask for support or open up fully in relationships.
+<br><br>
+<h3>Disorganized (Fearful-Avoidant) Attachment</h3>
+ A mix of both anxious and avoidant traits, often linked to past pain or inconsistent caregiving. This style may lead to wanting closeness while also feeling fear or mistrust. With support, it’s possible to create more safety, stability, and trust in relationships.
+ """
+                modal("Attachment Styles", content)
+            }
             else -> {
                 """
                 <div class="row">
@@ -230,26 +304,26 @@ Our Alternative Lifestyles Counseling and Coaching supports individuals and part
                   <tbody>
                     <tr>
                       <td class="support-item"><a class="support-item" href="/services?service=adhd">ADHD</a></td>
-                      <td>Adoption Support</td>
+                      <td class="support-item"><a class="support-item" href="/services?service=adoption">Adoption Support</a></td>
                       <td class="support-item"><a class="support-item" href="/services?service=lifestyles">Alternative lifestyles</a></td>
                     </tr>
                     <tr>
-                      <td>Attachment Styles</td>
+                      <td class="support-item"><a class="support-item" href="/services?service=attachment">Attachment Styles</a></td>
                       <td class="support-item"><a class="support-item" href="/services?service=anxiety">Anxiety</a></td>
                       <td class="support-item"><a class="support-item" href="/services?service=career">Career planning and development</a></td>
                     </tr>
                     <tr>
                       <td class="support-item"><a class="support-item" href="/services?service=separation">Divorce, separation, and uncoupling</a></td>
                       <td class="support-item"><a class="support-item" href="/services?service=family">Family counseling</a></td>
-                      <td>Fertility, Pregnancy &amp; Reproductive Loss Support for Men and Women</td>
+                      <td class="support-item"><a class="support-item" href="/services?service=fertility">Fertility, Pregnancy &amp; Reproductive Loss Support for Men and Women</a></td>
                     </tr>
                     <tr>
                       <td class="support-item"><a class="support-item" href="/services?service=grief">Grief and loss</a></td>
                       <td class="support-item"><a class="support-item" href="/services?service=diagnose">Guided support for life-altering diagnoses</a></td>
-                      <td>Ikigai coaching</td>
+                      <td class="support-item"><a class="support-item" href="/services?service=ikigai">Ikigai coaching</a></td>
                     </tr>
                     <tr>
-                      <td>Intimacy counseling</td>
+                      <td class="support-item"><a class="support-item" href="/services?service=intimacy">Intimacy counseling</a></td>
                       <td class="support-item"><a class="support-item" href="/services?service=lgbtq">LGBTQAI2S+ &amp; Gender identity</a></td>
                       <td class="support-item"><a class="support-item" href="/services?service=mensmentalhealth">Men’s mental health</a></td>
                     </tr>
@@ -259,9 +333,9 @@ Our Alternative Lifestyles Counseling and Coaching supports individuals and part
                       <td class="support-item"><a class="support-item" href="/services?service=growth">Personal growth</a></td>
                     </tr>
                     <tr>
-                      <td>Pre-commitment counseling</td>
-                       <td class="support-item"><a class="support-item" href="/services?service=relationships">Relationships counseling</a></td>
-                      <td>Spiritual</td>
+                      <td class="support-item"><a class="support-item" href="/services?service=precommit">Pre-commitment counseling</a></td>
+                      <td class="support-item"><a class="support-item" href="/services?service=relationships">Relationships counseling</a></td>
+                      <td class="support-item"><a class="support-item" href="/services?service=spiritual">Spiritual</a></td>
                     </tr>
                     <tr>
                       <td class="support-item"><a class="support-item" href="/services?service=womansmh">Women’s mental health</a></td>
